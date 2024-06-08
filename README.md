@@ -15,6 +15,6 @@ Requirements:
 * matplotlib >= 3.4.2
 
 Train & Test
-1. Download slip detection data，我们使用的数据集来自这篇论文https://arxiv.org/abs/1802.10153，请自行下载
+1. We used a dataset from this paper: https://arxiv.org/abs/1802.10153, please download the slip detection data yourself.
 2. python main.py
 3. python test.py
