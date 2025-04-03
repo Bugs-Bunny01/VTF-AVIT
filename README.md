@@ -1,11 +1,15 @@
-our paper: VTF-AVIT: Enhanced Slip Detection via Token-Reorganized Multimodal Fusion
+# VTF-AVIT
+### Our paper has now been accepted by the BMSE journal.
 
-Abstract:
-Accurate slip detection remains a critical challenge for dexterous robotic manipulation. This paper presents VTF-AVIT, a novel vision-tactile fusion framework that synergizes adaptive token pruning with Transformer architectures for real-time slip detection. Our core innovation lies in two aspects: (1) A dynamic token reorganization mechanism that automatically preserves task-critical features (e.g., shear deformation patterns in GelSight tactile images) while pruning redundant background tokens, reducing computational complexity from {O}(N^2) to {O}(KN) where K denotes the adaptive preservation ratio (optimally 0.6); (2) Hierarchical cross-modal attention layers that effectively fuse visual (RGB-D) and tactile (pressure/geometry) modalities through learned attention weights. Extensive experiments on a multimodal grasping dataset containing 12,800 samples demonstrate superior performance: achieves 86.75% detection accuracy with 12.83\,ms inference time per frame, reduces FLOPs by 41% compared to vanilla Vision Transformers (ViT), and maintains 89.3% slip compensation success rate on UR5 robotic platform. The proposed method shows 3.1% accuracy improvement over conventional Transformers and 5.7% over CNN-LSTM baselines. 
+## Title: 
+Efficient Visual-Tactile Transformer with Token Reorganization for Robotic Slip Detection
+
+## Abstract:
+Transformer architectures have gained prominence in robotic slip detection owing to their capacity in capturing spatiotemporal correlations within multimodal sensory streams. Nevertheless, the conventional full-token self-attention mechanism inherent in standard Transformers introduces certain limitations, including quadratic computational complexity, data-hungry training requirements. To address these limitations, we propose a token reorganization scheme, leveraging class token attention saliency in the deep layers of the neural network to dynamically reorganize tokens. This approach selectively retains task-critical information in the visual-tactile modalities while efficiently compressing background tokens through adaptive averaging, thereby optimizing computational efficiency without compromising performance. This scheme reduces the computational complexity of salient self-attention. Based on this scheme, a visual-tactile fusion Transformer for robot slip detection is developed. Extensive experiments have shown that the proposed Transformer can achieve state-of-the-art performance, which will reduce the computational cost while increasing the detection accuracy to 86.75\% by enhancing the focus on deformation-sensitive features. This work provides an effective visual tactile perception solution for robust robot manipulation under real-world uncertainties. Our code and dataset are available at \url{https://github.com/Bugs-Bunny01/VTF-AVIT}.
 ![image](https://github.com/Bugs-Bunny01/VTF-SLIP-TranSFormer/blob/main/V-T-fusion.png)
 ![image](https://github.com/Bugs-Bunny01/VTF-SLIP-TranSFormer/blob/main/token-visual.png)
 
-Requirements:
+## Requirements:
 * python3 >= 3.8.10                 
 * numpy >= 1.21.1                
 * pytorch  >= 1.9.0+cpu (cpu training&testing) or 1.9.0+cu102 (cuda training&testing)
