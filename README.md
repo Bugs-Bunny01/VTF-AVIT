@@ -18,7 +18,7 @@ Transformer architectures have gained prominence in robotic slip detection owing
 * json >= 2.0.9
 * matplotlib >= 3.4.2
 
-Train & Test
+## Train & Test
 1. We used a dataset from this paper: https://arxiv.org/abs/1802.10153, please download the slip detection data yourself.
 2. python main.py
 3. python test.py
